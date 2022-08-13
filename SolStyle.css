@@ -8,11 +8,11 @@
 font-family: 'League Spartan', sans-serif;
 */
 
+/* border: 2px solid red; */
+
 body {
     background-image: url(images/bg-pattern-top-mobile.svg);
     background-repeat: no-repeat;
-
-
 
     display: flex;
     flex-direction: column;
@@ -20,15 +20,19 @@ body {
     font-family: 'League Spartan', sans-serif;
 }
 
+#titles{
+    width: 350px;
+}
+
 h1{
+    width: 250px;
     color: hsl(300, 43%, 22%);
-    font-size: 2.5em;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
+    font-size: 2.0em;
     line-height: 0.8em;
     text-align: center;
+
     margin-top: 2em;
+    margin-left: 50px;
 }
 
 h2{
@@ -42,35 +46,54 @@ h2{
     line-height: 1.0em;
     margin-top: 1em;
     margin-bottom: 1em;
+    
 }
 
-#scoreI{
+#scores{
     display: flex;
     flex-direction: column;
     width: 340px;
+    justify-content: center;
+    
 }
 
-.scoreF{
+.scoress{
     background-color: hsl(300, 24%, 96%);
     width: 100%;
     align-content: center;
     justify-content: center;
     margin-top: 1.0em;
-    color: hsl(300, 43%, 22%);
     border-radius: 0.5em;
     text-align: center;
-    padding: 1em;
-    font-weight: 700;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;   
 }
 
-#commentI{
+.stars{
+    justify-content: center;
+}
+
+#star{
+    width: 1em;
+}
+
+.rated{
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+    font-weight: 700;
+    padding-top: 0.5em;
+}
+
+#comments{
     display: flex;
     flex-direction: column;
     width: 340px;
     text-align: center;
+    margin-top: 2em;
 }
 
-article{
+.comment{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -95,10 +118,12 @@ div{
 h3{
     color: white;
     font-size: 1.0em;
+    text-align: left;
 }
 
 span{
     color: hsl(333, 80%, 67%);
+    font-size: 0.9em;
 }
 
 article p{
@@ -109,3 +134,171 @@ article p{
     line-height: 1.2em;
 }
 
+@media (min-width: 900px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    /* reglas para llamar los fondos
+    font-family: 'League Spartan', sans-serif;
+    */
+    
+    /* border: 2px solid red; */
+    
+    body {
+        width: 900px;
+        height: 600px;
+        background-image: url(images/bg-pattern-top-mobile.svg);
+        background-repeat: no-repeat;
+    
+        display: flex;
+        flex-direction: row;
+        
+        font-family: 'League Spartan', sans-serif;
+        
+        flex-wrap: wrap;
+    }
+    
+    #titles{
+        width: 350px;
+        margin-top: 2em;
+        margin-left: 2em;
+        
+        align-items: flex-start;
+    }
+    
+    h1{
+        margin: 0%;
+        padding: 0%;
+        width: 90%;
+        color: hsl(300, 43%, 22%);
+        font-size: 3.0em;
+        line-height: 0.8em;
+        text-align: left;   
+         
+    }
+    
+    h2{
+        color: hsl(303, 10%, 53%);
+        
+        width: 340px;
+        text-align: left;
+        font-size: 1.0em;
+        line-height: 1.0em;           
+    }
+    
+    #scores{
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        
+        padding: 0;
+        margin: 0;
+       margin-left: 60px;
+    }
+    
+    .scoress{
+        background-color: hsl(300, 24%, 96%);
+        width: 350px;
+        margin-top: 1.0em;
+        border-radius: 0.5em;
+        text-align: center;
+        padding: 0.5em;
+        display: flex;
+        flex-direction: row;
+        
+        justify-content:start;
+    }
+    
+    .stars{
+        align-items: center;
+        justify-content: start;
+        
+        padding-left: 0.5em;
+    }
+    
+    #star{
+        width: 1em;
+        height: 1em;
+        align-items: baseline;
+    }
+    
+    .rated{
+        color: hsl(300, 43%, 22%);
+        font-weight: 700;
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    #score2{
+        margin-left: 2em;
+    }
+    #score3{
+        margin-left: 4em;
+    }
+    
+    #comments{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        border: 2px solid red;
+        justify-content: center;
+    }
+    
+    .comment{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 60%;
+        background-color: hsl(300, 43%, 22%);
+    
+        border-radius: 0.5em;
+        padding: 1.2em;
+        border: 2px solid red;
+        
+        justify-content: center;
+    }
+    
+    div{
+        display: flex;
+        text-align: center;
+    }
+    
+    .portrait{
+        border-radius: 50%;
+        width: 2.0em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+    
+    h3{
+        color: white;
+        font-size: 1.0em;
+        text-align: left;
+    }
+    
+    span{
+        color: hsl(333, 80%, 67%);
+        font-size: 0.9em;
+    }
+    
+    article p{
+        color: white;
+        font-size: 0.8em;
+        text-align: left;
+        font-weight: 400;
+        line-height: 1.2em;
+    }
+
+    #comment2{
+        margin-top: 2em;
+        margin-left: 1em;
+    }
+    #comment3{
+        margin-top: 3em;
+        margin-left: 1em;
+    }
+}
